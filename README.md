@@ -1,5 +1,5 @@
 # MultiClass-FaceDectionSystem-Flask
-![](https://github.com/user-attachments/assets/7c5fc8c3-6556-4b49-af19-cbb9b3193b6f)
+![Landing Page](https://github.com/DevendraIngle/MultiClass-FaceDectionSystem-Flask/blob/main/Landing%20page.png?raw=true)
 ## :bulb: Objective :
 
 Develop a face recognition system that can take user input images and live video, preprocess them, store them, and recognize faces using DeepFace and the VGG16 model, displaying results through a web interface and is to develop a robust and user-friendly face recognition system that leverages advanced deep learning techniques to enhance security and personalization in various applications.
