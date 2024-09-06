@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Page</title>
+  <link rel="stylesheet" href="../static/style/popup_page.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo"></div>
+      <div class="logout">logout</div>
+    </div>
+  </header>
+
+  <div class="main">
+    <div class="first">
+      <div class="popup">
+        <h2></h2>
+        <p>A person with the same name already exists.</p>
+        <div class="buttons">
+          <form id="addPhotosForm" action="{{ url_for('add_photos') }}" method="POST">
+            <input type="hidden" name="folderName" value="{{ folder_name }}">
+            <input type="hidden" name="tempDir" value="{{ temp_dir }}">
+            <button type="submit" class="button" id="b1">Add new photos of existing person</button>
+          </form>
+          <form action="{{ url_for('discard') }}" method="POST">
+            <button type="submit" class="button" id="b2">Discard</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

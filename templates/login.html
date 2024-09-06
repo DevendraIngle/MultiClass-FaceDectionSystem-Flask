@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="../static/style/login.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+</head>
+
+<body>
+  <div class="login">
+    <h1 class="login-to-access">Login to access your account</h1>
+    <div class="input-fields-parent">
+      <div class="input-fields">
+        <h1 class="login1">Login</h1>
+        <div class="enter-your-account">Enter your account details</div>
+        <form method="POST" action="{{ url_for('login') }}">
+          <div class="username">
+            <input type="text" id="username" name="username" class="username-input" placeholder="Username" required />
+          </div>
+          <div class="password">
+            <input type="password" id="password" name="password" class="password-input" placeholder="Password" required />
+          </div>
+          <button type="submit" class="login-wrapper">
+            <div class="login2">Login</div>
+          </button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  
+</body>
+
+</html>

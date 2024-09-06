@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../static/style/upload_confirmation_page.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+
+    <div class="nav">
+
+      <div class="logo"> </div>
+      <div class="logout" id='lout'> logout </div>
+
+    </div>
+  </header>
+
+  
+
+  <div class="main">
+
+    <div class="first">
+
+      <div class="upload green tick">
+        <img src="../static/confirmation.png" alt="">
+
+      </div>
+      <div class="massage" id="message">
+        <p>Your image and details has been submitted successfully and Processed</p>
+      </div>
+      <div class="button" id="go_to_navi">
+        Go To Navigation Panel 
+      </div>
+      <div class="button"  id="train_model">
+        Train Model
+      </div>
+      <div class="button"  id="upload_more">
+        Upload More Image
+      </div>
+    </div>
+<script>
+  document.getElementById("upload_more").addEventListener("click", function() {
+    window.location.href = "upload";
+});
+
+document.getElementById("train_model").addEventListener("click", function() {
+    window.location.href = "train_m";
+});
+
+document.getElementById("go_to_navi").addEventListener("click", function() {
+    window.location.href = "navigation";
+});
+document.getElementById("lout").addEventListener("click", function() {
+    window.location.href = "login";
+});
+</script>
+    
+
+</body>
+
+</html>

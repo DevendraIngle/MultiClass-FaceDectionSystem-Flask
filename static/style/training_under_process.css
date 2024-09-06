@@ -1,0 +1,135 @@
+body {
+  background-color: blanchedalmond;
+  background-image: url('../background.png');
+  background-size: cover;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: inherit;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgba(17, 16, 16, 0.2);
+  color: white;
+  text-align: center;
+}
+
+.nav {
+  width: 100%;
+  height: 50px;
+}
+
+.logout {
+  float: right;
+  color: white;
+  margin-top: 10px;
+  margin-right: 20px;
+  font-size: 25px;
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  padding: 5px 10px;
+  /* Add padding for better hover effect */
+  border-radius: 5px;
+  /* Rounded corners */
+}
+
+.logout:hover {
+  color: #ff9987;
+  /* Change text color to tomato */
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Light background on hover */
+  transform: scale(1.1);
+  /* Slightly increase size */
+  cursor: pointer;
+  /* Change cursor to pointer */
+}
+
+.logo {
+  background-image: url(../logo.png);
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+  margin-left: 21px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.first {
+  width: 100%;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 12%;
+  height: 42px;
+  margin: 11px;
+  border-radius: 15px;
+  border: 1px solid #9f9f9f;
+  background: linear-gradient(45deg, #000000, #1a674a);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+}
+
+#cancel {
+  background: rgb(193, 67, 67)
+}
+
+.button:hover {
+  background-color: #ff6347;
+  /* Change background color on hover */
+  transform: scale(1.05);
+  /* Slightly increase size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Add a shadow effect */
+  cursor: pointer;
+  /* Change cursor to pointer */
+}
+.text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  width: auto;
+  font-size: 30px;
+  margin-left: 34px;
+  margin-top: 120px;
+}
+
+/* for making loading animation ring*/
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid green;
+  border-right: 16px solid #000000;
+  border-radius: 97%;
+  width: 200px;
+  height: 200px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

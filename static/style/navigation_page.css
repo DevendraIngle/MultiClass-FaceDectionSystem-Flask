@@ -1,0 +1,147 @@
+body {
+  background-color: blanchedalmond;
+  background-image: url('../background.png');
+  background-size: cover;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: inherit;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgba(17, 16, 16, 0.2);
+  color: white;
+  text-align: center;
+}
+
+.nav {
+  width: 100%;
+  height: 50px;
+}
+
+.logout {
+  float: right;
+  color: white;
+  margin-top: 10px;
+  margin-right: 20px;
+  font-size: 25px;
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  padding: 5px 10px;
+  /* Add padding for better hover effect */
+  border-radius: 5px;
+  /* Rounded corners */
+}
+
+.logout:hover {
+  color: #ff9987;
+  /* Change text color to tomato */
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Light background on hover */
+  transform: scale(1.1);
+  /* Slightly increase size */
+  cursor: pointer;
+  /* Change cursor to pointer */
+}
+
+.logo {
+  background-image: url(../logo.png);
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+  margin-left: 21px;
+}
+
+.Navigation-panel {
+  font-size: 50px;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.main {
+  display: flex;
+
+  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.first {
+
+  width: 100%;
+  height: auto;
+
+
+
+}
+
+.second {
+  width: auto;
+  height: auto;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  height: 40px;
+  margin: 25px;
+  border-radius: 15px;
+  border: 2px solid #09bcc5;
+  background: linear-gradient(45deg, #000000, #1a674a);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ff6347;
+  /* Change background color on hover */
+  transform: scale(1.05);
+  /* Slightly increase size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Add a shadow effect */
+  cursor: pointer;
+  /* Change cursor to pointer */
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  width: auto;
+  font-size: 25px;
+
+  margin-left: 25px;
+  margin-top: 40px;
+
+}
+
+img {
+  width: 378px;
+  height: auto;
+  transition: width 0.3s ease, height 0.3s ease;
+  /* Smooth transition */
+}
+
+img {
+  width: 378px;
+  /* Set initial width */
+  height: auto;
+  /* Maintain aspect ratio */
+  transition: transform 0.3s ease;
+  /* Smooth transition for the transform property */
+}
+
+img:hover {
+  transform: scale(1.1);
+  /* Zoom in to 110% of the original size */
+}

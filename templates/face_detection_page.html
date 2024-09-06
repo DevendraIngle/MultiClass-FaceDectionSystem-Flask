@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Detection</title>
+    <link rel="stylesheet" href="../static/style/face_detection_page_new.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="nav">
+        <div class="logo"></div>
+        <div class="logout">logout</div>
+      </div>
+    </header>
+
+    <div class="Navigation-panel">Face Detection</div>
+
+    <div class="main">
+      <div class="first">
+        <div class="upload-container">
+          <div class="upload-box" id="upload-box">
+            <div id="drop-area">
+              <img
+                src="../static/Upload icon.png"
+                alt="Upload Icon"
+                class="upload-icon"
+              />
+              <p>Drag & drop files or <span id="browse">Browse</span></p>
+              <p class="supported-formats">Supported formats: JPG, JPEG, PNG</p>
+              <img
+                id="image-preview"
+                class="image-preview"
+                style="display: none"
+                alt="Image Preview"
+              />
+              <input
+                type="file"
+                id="image"
+                name="image"
+                accept="image/*"
+                form="uploadForm"
+                style="display: none;"
+              />
+            </div>
+          </div>
+          <div id="confirmation-message" class="confirmation-message" hidden>
+            Image ready for upload!
+          </div>
+          <button id="upload-button" form="uploadForm">UPLOAD FILES</button>
+          <form
+            id="uploadForm"
+            action="{{ url_for('upload_image_for_prediction') }}"
+            method="POST"
+            enctype="multipart/form-data"
+          ></form>
+        </div>
+      </div>
+      <div class="second">
+        <p>OR</p>
+      </div>
+      <div class="third">
+        <img src="../static/camera_icon.png" id="camera-logo" alt="Camera Icon" />
+        <div class="button" id="open_camera">OPEN CAMERA</div>
+      </div>
+      <div class="fourth">
+      <img src="../static/ai_brain.png" alt="" />
+      </div>
+      <div class="instructions">
+        <h2>Face Detection Guide</h2>
+      
+        <div class="option">
+          <h3>Upload Image</h3>
+          <ol>
+            <li>Click "Browse" or drag & drop file.</li>
+            <li>Preview and click "UPLOAD."</li>
+            <li>View results on screen.</li>
+          </ol>
+        </div>
+      
+        <div class="option">
+          <h3>Use Camera</h3>
+          <ol>
+            <li>Click "OPEN CAMERA."</li>
+            <li>Ensure face is visible.</li>
+            <li>See real-time results.</li>
+          </ol>
+        </div>
+      
+        <div class="troubleshooting">
+          <h3>Troubleshooting</h3>
+          <ul>
+            <li>Check file format.</li>
+            <li>Allow camera access.</li>
+            <li>Ensure good lighting.</li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+    </div>
+   
+    <script src="../static/script/face_detection_page.js"></script>
+  </body>
+</html>
+
+

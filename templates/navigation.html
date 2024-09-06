@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style/navigation_page.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="nav">
+        <div class="logo"></div>
+        <div class="logout" id="lout">logout</div>
+      </div>
+    </header>
+
+    <div class="Navigation-panel">Navigation panel</div>
+
+    <div class="main">
+      <div class="first">
+        <div class="text"><h3>Upload image for cleaning and trianing first.</h3></div>
+        <div class="button" id="upload-image-btn">
+          Upload Images for Training
+        </div>
+        <div class="button" id="train-model-btn">
+          Train model on Existing Data
+        </div>
+        <div class="button" id="face-detection-btn">Face Detection</div>
+
+        <div class="list"></div>
+
+        <ul>
+          <h3>Train model on existing data</h3>
+          <li>
+             Use existing data to further train the
+            model.
+          </li>
+          <h3>Face Detection</h3>
+          <li>Upload Image: Identify the person in a static image.</li>
+          <li>Open Camera: Detect faces live on screen</li>
+
+          <h4>Select an option above to get started</h4>
+        </ul>
+      </div>
+
+      <div class="second">
+        <img src="../static/robot.png" alt="" />
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("upload-image-btn")
+        .addEventListener("click", function () {
+          window.location.href = "upload";
+        });
+
+      document
+        .getElementById("train-model-btn")
+        .addEventListener("click", function () {
+          window.location.href = "train_m";
+        });
+
+      document
+        .getElementById("face-detection-btn")
+        .addEventListener("click", function () {
+          window.location.href = "face_detection";
+        });
+      document.getElementById("lout").addEventListener("click", function () {
+        window.location.href = "login";
+      });
+    </script>
+  </body>
+</html>

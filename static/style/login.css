@@ -1,0 +1,184 @@
+/* Global styles */
+body {
+  background-color: blanchedalmond;
+  background-image: url('../background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Login page specific styles */
+.login {
+  background-color: rgba(0, 0, 0, 0.8); /* Darkened background */
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.5); /* Green shadow */
+  padding: 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px; /* Adjust for smaller screens */
+  text-align: center;
+  position: relative; /* For background image positioning */
+}
+
+.login-to-access {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.input-fields-parent {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.input-fields {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+}
+
+.login1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.enter-your-account {
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.username-input,
+.password-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #55c57a; /* Green border */
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.3); /* Light green background */
+  color: #ffffff; /* White text */
+}
+
+.username-input::placeholder,
+.password-input::placeholder {
+  color: #cccccc; /* Placeholder color */
+}
+
+.forgot-password {
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.forgot-password a {
+  color: #3d9e5e;
+  text-decoration: none;
+}
+
+.login-wrapper {
+  width: 100%;
+  background-color: #55c57a; /* Green background */
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-wrapper:hover {
+  background-color: #3d9e5e; /* Darker green on hover */
+}
+
+.logo-image-icon {
+  width: 50px; /* Adjust the size as needed */
+  height: auto;
+  margin-top: 20px; /* Space between form and image */
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  z-index: -1;
+  opacity: 0.5; /* Optional: adjust opacity */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .login {
+    padding: 30px;
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .login-to-access {
+    font-size: 20px;
+  }
+
+  .input-fields {
+    padding: 15px;
+  }
+
+  .username-input,
+  .password-input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .login-wrapper {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .logo-image-icon {
+    top: 10%;
+    right: 5%;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login {
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .login-to-access {
+    font-size: 18px;
+  }
+
+  .input-fields {
+    padding: 10px;
+  }
+
+  .login-wrapper {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .logo-image-icon {
+    top: 8%;
+    right: 3%;
+    width: 30px;
+  }
+}

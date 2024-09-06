@@ -1,0 +1,284 @@
+body {
+  background-color: blanchedalmond;
+  background-image: url("../background.png");
+  background-size: cover;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgba(17, 16, 16, 0.2);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.nav {
+  width: 100%;
+  height: 50px;
+}
+
+.logout {
+  float: right;
+  color: white;
+  margin-top: 10px;
+  margin-right: 20px;
+  font-size: 1.5rem; /* Changed to relative unit */
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.logout:hover {
+  color: #ff9987;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.logo {
+  background-image: url(../logo.png);
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+  margin-left: 21px;
+}
+
+.Navigation-panel {
+  font-size: 3rem; /* Changed to relative unit */
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.first,
+.second,
+.Third,
+.fourth {
+  width: auto;
+  height: auto;
+  margin: 10px;
+  flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 62%;
+  height: 40px;
+  margin: 25px;
+  border-radius: 15px;
+  border: 2px solid #09bcc5;
+  background: linear-gradient(45deg, #000000, #1a674a);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  width: auto;
+  font-size: 1.5rem; /* Changed to relative unit */
+  margin-left: 25px;
+  margin-top: 40px;
+}
+
+img {
+  width: 132%; /* Make images responsive */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upload-box {
+  border: 2px dashed #00a896;
+  border-radius: 10px;
+  width: 80%; /* Responsive width */
+  max-width: 400px; /* Max width for large screens */
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+}
+
+#drop-area {
+  text-align: center;
+}
+
+.upload-icon {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+#drop-area p {
+  margin: 0;
+  color: #555;
+}
+
+#browse {
+  color: #00a896;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.supported-formats {
+  font-size: 0.75rem; /* Changed to relative unit */
+  color: #777;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem; /* Changed to relative unit */
+  color: #fff;
+  background-color: #00a896;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ccc;
+}
+
+.confirmation-message {
+  margin-top: 10px;
+  color: #00a896;
+  font-size: 0.875rem; /* Changed to relative unit */
+}
+
+#open_camera {
+  margin: 36px;
+  padding: 0;
+  margin-top: 11px;
+}
+
+#upload-button {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 1rem; /* Changed to relative unit */
+  color: #fff;
+  background-color: #00a896;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  object-position: center;
+  margin-top: 20px;
+}
+
+#upload-button:hover {
+  background-color: #1a674a;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#image {
+  text-align: center;
+}
+
+/* Media Queries for Different Screen Sizes */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .Navigation-panel {
+    font-size: 2rem; /* Smaller font size on mobile */
+  }
+
+  .logout {
+    font-size: 1.25rem; /* Adjust font size */
+  }
+}
+.main {
+  display: flex;
+  justify-content: space-around; /* Distributes space around the flex items */
+  align-items: center; /* Aligns items vertically centered */
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  padding: 20px; /* Optional: Adds some padding around the main container */
+  gap: 20px; /* Adds space between items */
+}
+
+.first,
+.second,
+.third,
+.fourth
+{
+  flex: 1 1 30%; /* Allows items to grow, shrink, and have a base width of 30% */
+  max-width: 30%; /* Prevents items from getting too wide */
+  text-align: center; /* Centers the text inside each item */
+}
+
+.second p {
+  font-size: 4.5rem; /* Adjust font size for better visibility */
+}
+
+#camera-logo {
+  max-width: 280px; /* Adjusts camera logo size if needed */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.button {
+  padding: 10px 20px; /* Adjusts button padding */
+}
+
+#open_camera {
+  width: auto; /* Adjusts width for the button */
+}
+
+.instructions {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  margin: 20px;
+  padding: 20px;
+  
+  border-radius: 10px;
+}
+
+h2, h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+ol, ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}

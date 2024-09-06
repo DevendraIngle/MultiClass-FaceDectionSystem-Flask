@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Detection</title>
+    <link rel="stylesheet" href="../static/style/training_under_process.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="nav">
+        <div class="logo"></div>
+        <div class="logout" id="lout">logout</div>
+      </div>
+    </header>
+
+    <div class="main">
+      <div class="first">
+        <div class="loader"></div>
+        <div class="text"><p>Model is Detecting the Face</p></div>
+        <div class="button" id="cancel">Cancel</div>
+        <script>
+          // Function to start prediction process
+          function startPredicting() {
+            fetch("/start_predicting_image", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                if (data.status === "success") {
+                  window.location.href = "/result_page"; // Redirect to result page
+                } else {
+                  alert("Starting Prediction Failed.");
+                }
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+                alert("An error occurred while predicting.");
+              });
+          }
+
+          // Start the prediction process when the page loads
+          window.onload = function () {
+            startPredicting();
+          };
+
+          document
+            .getElementById("lout")
+            .addEventListener("click", function () {
+              window.location.href = "login";
+            });
+          document
+            .getElementById("cancel")
+            .addEventListener("click", function () {
+              window.location.href = "navigation";
+            });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
